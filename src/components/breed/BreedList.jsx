@@ -155,7 +155,7 @@ export default function BreedList(props) {
         </Button>
       </ButtonGroup>
       <Row>
-        <span>{model.offer ? `${Service.web3.utils.fromWei(model.offer.price)} ETH ` : ''}</span>
+        <span>{model.offer ? `${Service.web3.utils.fromWei(model.offer.price)} BNB ` : ''}</span>
         <Badge
           variant={readyStatus.isReady ? 'success' : 'secondary'}
           className="m-1"
