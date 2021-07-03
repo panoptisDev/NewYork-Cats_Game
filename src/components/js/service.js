@@ -8,14 +8,19 @@ export default class Service {
     // '0x38': // Binance MainNet
     '0x61': {
       // Binance Test'
-      kitty: '0x89Cc3AFD0b47b53557CF2eA6e449766b9933ed45',
-      market: '0x577164E040c78A798bec757EC2860FCbf13433b0',
+      kitty: '0x425c3820d0F6c270C01a0BfbdBC5f2bF5d012838',
+      market: '0xE6aD86b5f7279cFa4ef48f0ca6C164d87e898045',
     },
     '0x38': {
       // Binance MainNet
       kitty: '0x9312e2681EC932ab10a8733F4Ff60B4068D32B6F',
       market: '0xe59ff6CF2f513Ea166D6af2226D78705906EA6bB',
     },
+    // '0x38': {
+    //   // Binance MainNet
+    //   kitty: '0x9312e2681EC932ab10a8733F4Ff60B4068D32B6F',
+    //   market: '0xe59ff6CF2f513Ea166D6af2226D78705906EA6bB',
+    // },
   };
 
   static web3;
