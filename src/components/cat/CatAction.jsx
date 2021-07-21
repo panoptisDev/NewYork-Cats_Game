@@ -111,7 +111,7 @@ export default function CatAction(props) {
       if (!offer) {
         break;
       }
-      const priceInBnb = Service.web3.utils.fromWei(offer.price, 'wei');
+      const priceInBnb = Service.web3.utils.fromWei(offer.price, 'ether');
       let sellButton;
       if (user !== offer.seller) {
         sellButton = offer.isSireOffer
