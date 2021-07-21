@@ -17,8 +17,8 @@ contract KittyContract is IERC721 {
     }
 
     Kitty[] internal kitties;
-    string _tokenName = "Kitty Token";
-    string _tokenSymbol = "CAT";
+    string _tokenName = "New York Cat Game";
+    string _tokenSymbol = "NYCG";
 
     bytes4 internal constant MAGIC_ERC721_RECEIVED = bytes4(
         keccak256("onERC721Received(address,address,uint256,bytes)")

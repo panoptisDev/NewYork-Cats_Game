@@ -117,13 +117,13 @@ contract('KittyContract', (accounts) => {
   });
 
   it('name should return the contract name', async () => {
-    const expected = 'Kitty Token';
+    const expected = 'New York Cat Game';
     const actual = await contract.name();
     expect(actual).to.equal(expected);
   });
 
   it('symbol should return the contract symbol', async () => {
-    const expected = 'CAT';
+    const expected = 'NYCG';
     const actual = await contract.symbol();
     expect(actual).to.equal(expected);
   });
