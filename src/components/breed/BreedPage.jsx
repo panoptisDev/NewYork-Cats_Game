@@ -96,7 +96,7 @@ export default function BreedPage() {
   };
 
   const sireCostTxt = sireOffer
-    ? ` (${Service.web3.utils.fromWei(sireOffer.price, 'binance coin')} BNB)` : '';
+    ? ` (${Service.web3.utils.fromWei(sireOffer.price, 'wei')} BNB)` : '';
 
   // Set Parents
   const parentBoxes = [
