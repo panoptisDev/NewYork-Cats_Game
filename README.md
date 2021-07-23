@@ -21,7 +21,7 @@ Testing: mocha, chai, truffle-assertions
 1. Requires an Etherem based wallet like <a href="https://metamask.io/" target="_blank">MetaMask</a>
 
 
-2. You'll need some test BNB on the BSC (testnet) network. Visit a <a href="https://testnet.binance.org/faucet-smart" target="_blank">faucet</a> to get some free test ETH. Make sure you've set your wallet network to `BSC Testnet`.
+2. You'll need some test BNB on the BSC (testnet) network. Visit a <a href="https://testnet.binance.org/faucet-smart" target="_blank">faucet</a> to get some free test BNB. Make sure you've set your wallet network to `BSC Testnet`.
 
 
 3. Visit the <a href="https://vibrant-jackson-d2e51f.netlify.app/" target="_blank">New York Cat Game</a> website.
