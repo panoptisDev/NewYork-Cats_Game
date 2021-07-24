@@ -1,5 +1,6 @@
 # New York Cats Game
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d238c635-4041-4d7a-a441-1db017cc3c31/deploy-status)](https://app.netlify.com/sites/vibrant-jackson-d2e51f/deploys)
 
 ### Contracts
 Deployed on Binance Smart Chain (TESTNET)
