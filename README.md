@@ -9,6 +9,13 @@ Kitties: https://testnet.bscscan.com/address/0xa674aFd39b6aAf4e6a85fE49d7b705fbD
 
 Marketplace: https://testnet.bscscan.com/address/0xc1006554aE254f7396787aa19f031f7ada760877
 
+Deployed on Binance Smart Chain (MAINNET)
+
+Kitties: https://bscscan.com/address/0xa674aFd39b6aAf4e6a85fE49d7b705fbD0d110Fa
+
+Marketplace: https://bscscan.com/address/0x3cabcf66795388a234a6da3fb7f1377c67c3e4e0
+
+
 ### Tech Stack
 
 Contracts: solidity, truffle, ganache
