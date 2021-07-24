@@ -5,9 +5,9 @@
 ### Contracts
 Deployed on Binance Smart Chain (TESTNET)
 
-Kitties: https://testnet.bscscan.com/address/0xa674aFd39b6aAf4e6a85fE49d7b705fbD0d110Fa
+Kitties: https://testnet.bscscan.com/address/0x69eea977d3fe5edfe803b59187b13640b6cea4ca
 
-Marketplace: https://testnet.bscscan.com/address/0xc1006554aE254f7396787aa19f031f7ada760877
+Marketplace: https://testnet.bscscan.com/address/0x0684048a66b53820c98c3870c51ecb58eef3113f
 
 ### Tech Stack
 
