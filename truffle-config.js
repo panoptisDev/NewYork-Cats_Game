@@ -52,7 +52,7 @@ exports.networks = {
   bsc: {
     provider: () => new HDWalletProvider(
       process.env.MNEMONIC,
-      `https://data-seed-prebsc-1-s1.binance.org:8545`
+      `https://speedy-nodes-nyc.moralis.io/a2bb21ef32b996eba7a5db09/bsc/mainnet`
     ),
     network_id: 97,
     gas: 5500000,
