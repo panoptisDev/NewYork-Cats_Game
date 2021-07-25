@@ -4,7 +4,7 @@ export default class WalletService {
   constructor(web3) {
     this.web3 = web3;
     if (window.ethereum) {
-      window.ethereum.autoRefreshOnNetworkChange = false;
+      window.ethereum.autoRefreshOnNetworkChange = true;
     }
   }
 
