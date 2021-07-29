@@ -11,9 +11,9 @@ Marketplace: https://testnet.bscscan.com/address/0xc1006554aE254f7396787aa19f031
 
 Deployed on Binance Smart Chain (MAINNET)
 
-Kitties: https://bscscan.com/address/0xa674aFd39b6aAf4e6a85fE49d7b705fbD0d110Fa
+Kitties: https://bscscan.com/token/0x6cc98285cc105aeec33dd99d0d148afa9cd31db4
 
-Marketplace: https://bscscan.com/address/0x3cabcf66795388a234a6da3fb7f1377c67c3e4e0
+Marketplace: https://bscscan.com/address/0xff72c92ae45c9f559620be52e1a4f17cd6699d1f
 
 
 ### Tech Stack
@@ -32,7 +32,7 @@ Testing: mocha, chai, truffle-assertions
 2. You'll need some test BNB on the BSC (testnet) network. Visit a <a href="https://testnet.binance.org/faucet-smart" target="_blank">faucet</a> to get some free test BNB. Make sure you've set your wallet network to `BSC Testnet`.
 
 
-3. Visit the <a href="https://vibrant-jackson-d2e51f.netlify.app/" target="_blank">New York Cat Game</a> website.
+3. Visit the <a href="https://newyorkcatgame.netlify.app/" target="_blank">New York Cat Game</a> website.
 
 4. Make sure your wallet is on the `BSC` test network. Press the "Connect" button. This will connect the wallet to the app so it can query the blockchain for your kitties.
 
