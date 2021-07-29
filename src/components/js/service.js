@@ -13,8 +13,8 @@ export default class Service {
     },
     '0x38': {
       // Binance MainNet
-      kitty: '0x5f0bfed511aabc742d0e5d810ecae57aaf5dc1fc',
-      market: '0x3cabcf66795388a234a6da3fb7f1377c67c3e4e0',
+      kitty: '0x6cc98285cc105aeec33dd99d0d148afa9cd31db4',
+      market: '0xff72c92ae45c9f559620be52e1a4f17cd6699d1f',
     },
   };
 
