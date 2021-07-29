@@ -25,7 +25,7 @@ export default class KittyDNA {
       name: ColorCattribute.NAMES.accentColor, displayName: 'Accent Color', type: Cattribute.TYPES.basic, defaultValue: 13,
     }),
     new ColorCattribute({
-      name: ColorCattribute.NAMES.eyeColor, displayName: 'Eye Color', type: Cattribute.TYPES.basic, defaultValue: 50,
+      name: ColorCattribute.NAMES.eyeColor, displayName: 'Eye Color', type: Cattribute.TYPES.basic, defaultValue: 30,
     }),
     new ColorCattribute({
       name: ColorCattribute.NAMES.earColor, displayName: 'Ear Color', type: Cattribute.TYPES.basic, defaultValue: 42,
