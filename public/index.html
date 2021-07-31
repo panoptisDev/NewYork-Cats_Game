@@ -28,7 +28,34 @@
   <!-- <script src="node_modules/moment/moment.js"></script> -->
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-</head>
+<style>
+  @-webkit-keyframes blink {
+    0%, 100% {
+        transform: scale(1, .05);
+    }
+    5%,
+    95% {
+        transform: scale(1, 1);
+    }
+}
+
+
+
+.catEyeleft,.catEyeright{
+ 
+-webkit-transform-origin: 50%!important;
+    -webkit-animation: blink 5s infinite!important;
+	
+	}
+
+
+.catEyeLidsleft,.catEyeLidsright{
+    -webkit-animation: blink 5s infinite;}
+
+
+  </style>
+  
+  </head>
 
 <body>
   <div id="root"></div>
