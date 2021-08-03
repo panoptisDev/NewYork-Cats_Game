@@ -16,7 +16,7 @@ export default class ColorCattribute extends Cattribute {
     super({
       defaultValue: 10,
       minValue: 10,
-      maxValue: 99,
+      maxValue: 89,
       digits: 2,
       ...props,
     });
