@@ -3,12 +3,17 @@ import { Badge, Button } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { connect } from './walletSaga';
 import { selectOnSupportedNetwork } from './walletSlice';
+import useWalletState from "../../hooks/useWalletState";
 
 export default function Wallet() {
   const dispatch = useDispatch();
   const {
-    account, network, isApproved, isConnected, web3ProviderAvailable,
-  } = useSelector((state) => state.wallet);
+    account,
+    isApproved,
+    isConnected,
+    network,
+    web3ProviderAvailable,
+  } = useWalletState();
   const isSupportedNetwork = useSelector(selectOnSupportedNetwork);
 
   const checkMark = isApproved

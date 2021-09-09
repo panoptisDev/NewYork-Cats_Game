@@ -7,11 +7,12 @@ import CatActions from './CatActions';
 import { selectKittiesByOwner } from './catSlice';
 import { CatModel } from '../js/catFactory';
 import { MediumCatContainer } from './CatBoxContainers';
+import useWalletState from "../../hooks/useWalletState";
 
 
 export default function CatList() {
-  const wallet = useSelector((state) => state.wallet);
-  const kitties = useSelector((state) => selectKittiesByOwner(state, wallet.account));
+  const { account } = useWalletState();
+  const kitties = useSelector((state) => selectKittiesByOwner(state, account));
 
   if (!kitties.length) {
     return (

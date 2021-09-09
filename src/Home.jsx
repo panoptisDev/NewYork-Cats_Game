@@ -3,12 +3,13 @@ import styled from 'styled-components';
 import {
   Alert, Button, Col, Row
 } from 'react-bootstrap';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import Cat from './components/cat/Cat';
 import { CatModel } from './components/js/catFactory';
 import { connect } from './components/wallet/walletSaga';
 import GenZeroCounter from './components/cat/GenZeroCounter';
+import useWalletState from "./hooks/useWalletState";
 
 const Featured = styled(Row)`
     max-width: 40rem;
@@ -20,7 +21,7 @@ const Div = styled(Col)`
 
 export default function Home() {
   const dispatch = useDispatch();
-  const wallet = useSelector((state) => state.wallet);
+  const { isConnected, web3ProviderAvailable } = useWalletState();
 
   const featured = [
     '3953145242385415',
@@ -50,7 +51,7 @@ export default function Home() {
         </p>
       </div>
       {
-        !wallet.isConnected && wallet.web3ProviderAvailable
+        !isConnected && web3ProviderAvailable
           ? (
             <h3>
               <Button size="lg" onClick={() => dispatch(connect())}>
@@ -61,7 +62,7 @@ export default function Home() {
           : null
       }
       {
-        !wallet.web3ProviderAvailable
+        !web3ProviderAvailable
           ? (
             <Alert variant="danger">
               Web 3 provider not detected.

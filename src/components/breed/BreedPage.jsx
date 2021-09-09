@@ -14,6 +14,7 @@ import { selectKittyById, selectKittyIdsByOwner } from '../cat/catSlice';
 import { selectOfferByKittyId, selectSireOfferIdsForBreeding } from '../market/offerSlice';
 import { approveParent, breed, sire } from './breedSaga';
 import { MediumCatContainer } from '../cat/CatBoxContainers';
+import useWalletState from "../../hooks/useWalletState";
 
 const PlaceHolder = styled.div`
     color: white;
@@ -39,9 +40,9 @@ export default function BreedPage() {
     // error TODO: display errors
   } = useSelector((state) => state.breed);
 
-  const wallet = useSelector((state) => state.wallet);
-  const kittyList = useSelector((state) => selectKittyIdsByOwner(state, wallet.account));
-  const sireList = useSelector((state) => selectSireOfferIdsForBreeding(state, wallet.account));
+  const { account } = useWalletState();
+  const kittyList = useSelector((state) => selectKittyIdsByOwner(state, account));
+  const sireList = useSelector((state) => selectSireOfferIdsForBreeding(state, account));
 
   const [list, setList] = useState(kittyList);
   const [listType, setListType] = useState(BreedListType.user);

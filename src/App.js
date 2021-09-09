@@ -19,23 +19,28 @@ import MarketPage from './components/market/MarketPage';
 import TransactionStatusToast from './components/notification/TransactionStatusToast';
 import { selectOnSupportedNetwork, selectSupportedNetworks } from './components/wallet/walletSlice';
 import AdminPage from './components/admin/AdminPage';
-
+import useWalletState from "./hooks/useWalletState";
 
 export default function App() {
-  const wallet = useSelector((state) => state.wallet);
+  const {
+      account,
+      isKittyCreator,
+      isOwner,
+      network,
+  } = useWalletState();
   const onSupportedNetwork = useSelector(selectOnSupportedNetwork);
   const supportedNetworks = useSelector(selectSupportedNetworks);
 
   // make sure connected to a supported network
   let unsupportedNetwork;
-  if (wallet.network) {
+  if (network) {
     unsupportedNetwork = onSupportedNetwork
       ? null
       : (
         <Alert variant="danger">
           Network
           {' '}
-          {wallet.network.name}
+          {network.name}
           {' '}
           not supported. Please connect to
           {' '}
@@ -49,8 +54,8 @@ export default function App() {
   // only include feature routes if wallet connected
   // to a supported network
   let routes = null;
-  if (wallet.account && onSupportedNetwork === true) {
-    const factoryRoute = wallet.isKittyCreator
+  if (account && onSupportedNetwork === true) {
+    const factoryRoute = isKittyCreator
       ? (
         <Route exact path="/factory">
           <CatFactory />
@@ -58,7 +63,7 @@ export default function App() {
       )
       : null;
 
-    const adminRoute = wallet.isOwner
+    const adminRoute = isOwner
       ? (
         <Route exact path="/admin">
           <AdminPage />

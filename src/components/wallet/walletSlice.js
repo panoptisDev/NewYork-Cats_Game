@@ -8,6 +8,29 @@ const {
 
 const walletAdapter = createEntityAdapter();
 
+/**
+ * @typedef WalletStateType
+ * @type {object}
+ * @property {unknown} account
+ * @property {unknown} error
+ * @property {unknown} isApproved
+ * @property {boolean} isConnected
+ * @property {boolean} isKittyCreator
+ * @property {boolean} isOwner
+ * @property {unknown} network
+ * @property {Array<string>} supportedNetworks
+ * @property {unknown} web3ProviderAvailable
+ */
+
+/**
+ * @typedef StateWithWallet
+ * @type {object}
+ * @property {WalletStateType} wallet
+ */
+
+/**
+ * @type {WalletStateType}
+ */
 const initialState = walletAdapter.getInitialState({
   account: null,
   error: null,
@@ -129,19 +152,43 @@ export const {
 /*
  * Selectors
 */
-export const selectIsApproved = (state) => state.wallet.isApproved;
-export const selectIsWalletConnected = (state) => state.wallet.isConnected;
-export const selectIsWeb3ProviderAvailable = (state) => state.wallet.web3ProviderAvailable;
 
+/**
+ * Returns the wallet from the redux store
+ * @return {(state: StateWithWallet) => WalletStateType}
+ */
+export const walletSelector = (state) => state.wallet;
+
+/**
+  @type {(state: StateWithWallet) => bool}
+ */
+export const selectIsApproved = createSelector(
+    walletSelector,
+    ({ isApproved }) => isApproved
+);
+
+/**
+ @type {(state: StateWithWallet) => bool}
+ */
+export const selectIsWalletConnected = createSelector(
+    walletSelector,
+    ({ isConnected }) => isConnected
+);
+export const selectIsWeb3ProviderAvailable = createSelector(
+    walletSelector,
+    ({ web3ProviderAvailable }) => web3ProviderAvailable
+);
+
+/**
+ @type {(state: StateWithWallet) => bool}
+ */
 export const selectOnSupportedNetwork = createSelector(
-  (state) => state.wallet,
+  walletSelector,
   (wallet) => {
-    const isSupported = Boolean(wallet.network)
+    return Boolean(wallet.network)
       && wallet.supportedNetworks.some(
         (chainId) => chainId === wallet.network.id
       );
-    // console.log('selectOnSupportedNetwork::', isSupported, 'wallet:', wallet);
-    return isSupported;
   }
 );
 
