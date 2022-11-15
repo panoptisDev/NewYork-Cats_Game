@@ -44,7 +44,7 @@ export default function MarketPage() {
   return (
     <div>
       <h1>Kitty Marketplace</h1>
-      <p>Buy and sell kitties!</p>
+      <p>Buy and sell kitties! Allow up to 60sec for the transaction. don`t click multiple times</p>
       {eventAlert}
       <ButtonGroup className="mb-2">
         <Button
