@@ -5,9 +5,11 @@
 ### Contracts
 Deployed on Binance Smart Chain (TESTNET)
 
-Kitties: https://testnet.bscscan.com/address/0xa674aFd39b6aAf4e6a85fE49d7b705fbD0d110Fa
+KittyFactory: https://testnet.bscscan.com/address/0x6333fe18DDc38Fa9971eE860443C7F0126B845B9#code
 
-Marketplace: https://testnet.bscscan.com/address/0xc1006554aE254f7396787aa19f031f7ada760877
+Marketplace: https://testnet.bscscan.com/address/0xC25152eAf01B40fEcefCF721f874026A7A95F3c6#code
+
+---
 
 Deployed on Binance Smart Chain (MAINNET)
 
