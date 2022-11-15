@@ -52,14 +52,44 @@ exports.networks = {
   bsc: {
     provider: () => new HDWalletProvider(
       process.env.MNEMONIC,
-      `https://speedy-nodes-nyc.moralis.io/a2bb21ef32b996eba7a5db09/bsc/mainnet`
+      `https://data-seed-prebsc-1-s1.binance.org:8545`
     ),
     network_id: 97,
     gas: 5500000,
-    confirmations: 2,
-    timeoutBlocks: 200,
+    confirmations: 4,
+    timeoutBlocks: 20000,
     skipDryRun: true,
   },
+  mumbai: {
+    provider: () => new HDWalletProvider(`word word word word word word word word word`, `https://rpc-mumbai.maticvigil.com`),
+    network_id: 80001,
+    confirmations: 3,
+    timeoutBlocks: 200,
+    skipDryRun: true
+  },
+  matic: {
+    provider: () => new HDWalletProvider(`word word word word word word word word word`, `https://rpc-mainnet.matic.network`),
+    network_id: 137,
+    confirmations: 4,
+    timeoutBlocks: 200,
+    skipDryRun: true
+  },
+  bscmainnet: {
+    provider: () => new HDWalletProvider(`word word word word word word word word word`, `https://bsc-dataseed.binance.org/`),
+    network_id: 56,
+    confirmations: 4,      // # of confs to wait between deployments. (default: 0)
+    timeoutBlocks: 10000,  // # of blocks before a deployment times out  (minimum/default: 50)
+    gasPrice: 20000000000,
+    skipDryRun: true       // Skip dry run before migrations? (default: false for public nets )
+  },
+  plugins: [
+    'truffle-plugin-verify',
+  ],
+  api_keys: {
+    bscscan:`R6N7X3SNDJSJW19HPV66MV3IGVWGU81BVE`,
+	polygonscan:`YH3F2DQYWK7B8MVX3H9IVEUP8A7KK9PYK4`
+  },
+  
 };
 exports.mocha = {
   // timeout: 100000
@@ -67,5 +97,12 @@ exports.mocha = {
 exports.compilers = {
   solc: {
     version: '0.5.12',
+    settings: {          // See the solidity docs for advice about optimization and evmVersion
+      optimizer: {
+        enabled: true,
+        runs: 200
+      }
+  
+    }
   },
 };

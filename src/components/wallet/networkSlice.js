@@ -9,6 +9,9 @@ export const EthNetworks = {
   '0x539': { id: '0x539', num: 1337, name: 'Ganache Local', },
   '0x38': { id: '0x38', num: 56, name: 'Binance MainNet', },
   '0x61': { id: '0x61', num: 97, name: 'Binance Test', },
+  '0x89': { id: '0x89', num: 137, name: 'Polygon MainNet', },
+  '0x13881': { id: '0x13881', num: 80001, name: 'Mumbai Test', },
+
 };
 
 const initialState = {
