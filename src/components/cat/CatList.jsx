@@ -16,7 +16,7 @@ export default function CatList() {
 
   if (!kitties.length) {
     return (
-      <p>You have no kittes! Go to the Marketplace to adpot some!</p>
+      <p>You have no kittes! Go to the Marketplace to adopt some!</p>
     );
   }
 

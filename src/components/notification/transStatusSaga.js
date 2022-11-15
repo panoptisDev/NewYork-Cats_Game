@@ -45,7 +45,7 @@ const messagesByAction = [
   },
   {
     prefix: buyKitty.typePrefix,
-    pending: 'Buying kitty...',
+    pending: 'Buying kitty please wait!',
   },
   {
     prefix: sireKitty.typePrefix,
