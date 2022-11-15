@@ -86,8 +86,8 @@ exports.networks = {
     'truffle-plugin-verify',
   ],
   api_keys: {
-    bscscan:`R6N7X3SNDJSJW19HPV66MV3IGVWGU81BVE`,
-	polygonscan:`YH3F2DQYWK7B8MVX3H9IVEUP8A7KK9PYK4`
+    bscscan:``,
+	polygonscan:``
   },
   
 };
